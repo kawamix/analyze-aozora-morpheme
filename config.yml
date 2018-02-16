@@ -1,0 +1,9 @@
+mongoDB:
+  db_name: aozora
+  collection_name: extended
+  # host: localhost
+  # port: 27017
+aozora:
+  directory: /hoge/新仮名使い/
+  list_person_all_extended: /hoge/list_person_all_extended_utf8.csv
+outputfile: result.csv
