@@ -19,7 +19,9 @@ config.ymlにMongoDBと青空文庫のディレクトリ・ファイルパス、
 mongoDB…MongoDBに関する情報を記述します。
 * db_name…データベース名
 * collection_name…コレクション名
+
 aozora…青空文庫のデータのパスを記述します。
 * directory…青空文庫のテキストファイルのパス
 * list_person_all_extended…青空文庫の作家別作品一覧拡充版ファイルのパス
+
 outputfile…結果を書き出すファイル
