@@ -6,8 +6,8 @@ import re
 import aozora_parser
 
 mongodb_config = yaml.load(open('config.yml', 'rt', encoding="utf-8"))["mongoDB"]
-DB_HOST = mongodb_config["host"] if hasattr(mongodb_config, "host") else "localhost"
-DB_PORT = mongodb_config["port"] if hasattr(mongodb_config, "port") else 27017
+DB_HOST = mongodb_config.get("host", "localhost")
+DB_PORT = mongodb_config.get("port", 27017)
 DB_NAME = mongodb_config["db_name"]
 COLLECTION_NAME = mongodb_config["collection_name"]
 

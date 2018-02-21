@@ -82,8 +82,8 @@ def parse(file, encoding="shift_jisx0213"):
 CONFIG = yaml.load(open('config.yml', 'rt', encoding="utf-8"))
 AOZORA_DIR = CONFIG["aozora"]["directory"]
 LIST_PERSON_ALL_EXTENDED = CONFIG["aozora"]["list_person_all_extended"]
-DB_HOST = CONFIG["mongoDB"]["host"] if hasattr(CONFIG["mongoDB"], "host") else "localhost"
-DB_PORT = CONFIG["mongoDB"]["port"] if hasattr(CONFIG["mongoDB"], "port") else 27017
+DB_HOST = CONFIG["mongoDB"].get("host", "localhost")
+DB_PORT = CONFIG["mongoDB"].get("port", 27017)
 DB_NAME = CONFIG["mongoDB"]["db_name"]
 COLLECTION_NAME = CONFIG["mongoDB"]["collection_name"]
 OUTPUT_FILE = CONFIG["outputfile"]
